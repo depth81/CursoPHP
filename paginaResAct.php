@@ -41,16 +41,17 @@
         //Array asociativo
         while($fila = mysqli_fetch_array($resultados,MYSQLI_ASSOC)){
 
-            echo "<table><tr><td>";
+            //echo "<table><tr><td>";
 
-            echo $fila['SECCION'] . "</td><td>";
-            echo $fila['NOMBREARTICULO'] . "</td><td>";
-            echo $fila['FECHA'] . "</td><td>";
-            echo $fila['PAISDEORIGEN'] . "</td><td>";
-            echo $fila['PRECIO'] . "</td><td></tr></table>";
+            echo "<form action='ActualizarMod.php' method='GET'>";
 
-            echo "<br>";
-            echo "<br>";
+            echo "<input type ='text' name='seccion' value='" . $fila['SECCION']. "' ><br>";
+            echo "<input type ='text' name='nombre' value='" . $fila['NOMBREARTICULO']. "' ><br>";
+            echo "<input type ='text' name='fecha' value='" . $fila['FECHA']. "' ><br>";
+            echo "<input type ='text' name='pais' value='" . $fila['PAISDEORIGEN']. "' ><br>";
+            echo "<input type ='number' step='any' name='precio' value='" . $fila['PRECIO']. "' ><br>";
+            echo "<input type='submit' name='enviando' value='Actualizar!'> ";
+            echo "</form>";
 
         }
         

@@ -39,8 +39,7 @@
         } */
 
         //var_dump. Equivalente al foreach anterior.
-        echo var_dump($alimentos);
-
+        var_dump($alimentos);
 
     ?>
     

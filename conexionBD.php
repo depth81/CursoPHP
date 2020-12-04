@@ -28,7 +28,7 @@
 
         //Validar la conexion con la BD. Si no hay conexion se ejecuta la sgte fxn.
         if(mysqli_connect_errno()){
-            echo("No se puede conectar con la BD");
+            echo "No se puede conectar con la BD";
             exit(); //Salir del codigo PHP.
         }
 
@@ -39,8 +39,8 @@
 
         //Realizar una consulta a la BD
         //$consulta = "SELECT * FROM datospersonales";
-        $consulta = "SELECT * FROM articulos";
-        //$consulta = "SELECT * FROM artículos WHERE PAISDEORIGEN = 'China'";
+        //$consulta = "SELECT * FROM articulos";
+        $consulta = "SELECT * FROM artículos WHERE PAISDEORIGEN = 'China'";
         
         /*$resultados es una tabla virtual creada en memoria con los datos de la consulta.
         resultset o recordset */
@@ -59,7 +59,7 @@
         //Hay informacion en la tabla virtual? Se pudo acceder a cada registro? entra al bucle
         //while(($fila = mysqli_fetch_row($resultados))){
         //Array asociativo
-        while(($fila = mysqli_fetch_array($resultados,MYSQLI_ASSOC))){
+        while($fila = mysqli_fetch_array($resultados,MYSQLI_ASSOC)){
 
             echo "<table><tr><td>";
 
@@ -75,8 +75,8 @@
             echo $fila['PAISDEORIGEN'] . "</td><td>";
             echo $fila['PRECIO'] . "</td><td></tr></table>";
 
-            echo("<br>");
-            echo("<br>");
+            echo "<br>";
+            echo "<br>";
 
         }
         

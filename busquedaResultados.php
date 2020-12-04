@@ -18,7 +18,7 @@
     
             //Validar la conexion con la BD. Si no hay conexion se ejecuta la sgte fxn.
             if(mysqli_connect_errno()){
-                echo("No se puede conectar con la BD");
+                echo "No se puede conectar con la BD";
                 exit(); //Salir del codigo PHP.
             }
     
@@ -29,7 +29,7 @@
     
             //Realizar una consulta a la BD
             //$consulta = "SELECT * FROM datospersonales";
-            $consulta = "SELECT * FROM articulos WHERE NOMBREARTICULO LIKE '%$laBusqueda%'";
+            $consulta = "SELECT * FROM artículos WHERE NOMBREARTICULO LIKE '%$laBusqueda%'";
             //$consulta = "SELECT * FROM artículos WHERE PAISDEORIGEN = 'China'";
             
             /*$resultados es una tabla virtual creada en memoria con los datos de la consulta.
@@ -47,8 +47,8 @@
                 echo $fila['PAISDEORIGEN'] . "</td><td>";
                 echo $fila['PRECIO'] . "</td><td></tr></table>";
     
-                echo("<br>");
-                echo("<br>");
+                echo "<br>";
+                echo "<br>";
     
             }
             
@@ -75,9 +75,9 @@
 
         }else{
 
-            echo("<form action = '" . $miPag . "' method = 'GET'> 
+            echo "<form action = '" . $miPag . "' method = 'GET'> 
             <label> Buscar: <input type = 'text' name = 'buscar'></label>
-            <input type = 'submit' name = 'Enviando' value = 'Click!'> </form>");
+            <input type = 'submit' name = 'Enviando' value = 'Click!'> </form>";
 
         }
 

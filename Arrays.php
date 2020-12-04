@@ -49,7 +49,7 @@
     //Recorrer un array[] asociativo.
     foreach($datos as $clave => $valor){
 
-        echo("A $clave le corresponde $valor <br>");
+        echo "A $clave le corresponde $valor <br>";
 
     }
 
