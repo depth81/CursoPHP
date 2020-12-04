@@ -9,7 +9,7 @@
     
     <form action="paginaResAct.php" method="GET">
 
-        <label>Buscar: <input type="text" name="buscar"></label>
+        <label>Buscar: <input type="number" name="buscar"></label>
         
         <input type="submit" name="enviando" value="Click!">
 

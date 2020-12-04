@@ -31,7 +31,7 @@
 
         //Realizar una consulta a la BD
         //$consulta = "SELECT * FROM datospersonales";
-        $consulta = "SELECT * FROM artículos WHERE NOMBREARTICULO LIKE '%$busqueda%'";
+        $consulta = "SELECT * FROM artículos WHERE ID = '$busqueda'";
         //$consulta = "SELECT * FROM artículos WHERE PAISDEORIGEN = 'China'";
         
         /*$resultados es una tabla virtual creada en memoria con los datos de la consulta.
@@ -45,12 +45,14 @@
 
             echo "<form action='ActualizarMod.php' method='GET'>";
 
+            echo "<input type ='number' step='any' name='id' value='" . $fila['ID']. "' ><br>";
             echo "<input type ='text' name='seccion' value='" . $fila['SECCION']. "' ><br>";
             echo "<input type ='text' name='nombre' value='" . $fila['NOMBREARTICULO']. "' ><br>";
             echo "<input type ='text' name='fecha' value='" . $fila['FECHA']. "' ><br>";
             echo "<input type ='text' name='pais' value='" . $fila['PAISDEORIGEN']. "' ><br>";
             echo "<input type ='number' step='any' name='precio' value='" . $fila['PRECIO']. "' ><br>";
             echo "<input type='submit' name='enviando' value='Actualizar!'> ";
+            
             echo "</form>";
 
         }

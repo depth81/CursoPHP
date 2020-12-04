@@ -9,6 +9,7 @@
     
 <?php    
 
+$id = $_GET["id"];
 $seccion = $_GET["seccion"];
 $nombre = $_GET["nombre"];
 $fecha = $_GET["fecha"];
@@ -34,7 +35,7 @@ mysqli_select_db($conexion, $db_nombre) or die ("No se encuentra la BD");
 mysqli_set_charset($conexion, "utf8");
 
 //Realizar una consulta a la BD
-$consulta = "UPDATE artículos SET SECCION='$seccion',NOMBREARTICULO='$nombre',FECHA='$fecha',PAISDEORIGEN='$pais',PRECIO=$precio WHERE PAISDEORIGEN= '$pais'";
+$consulta = "UPDATE artículos SET ID=$id, SECCION='$seccion',NOMBREARTICULO='$nombre',FECHA='$fecha',PAISDEORIGEN='$pais',PRECIO=$precio WHERE ID= $id";
 /*$resultados es una tabla virtual creada en memoria con los datos de la consulta.
 Es un resultset o recordset */
 $resultados = mysqli_query($conexion, $consulta);
@@ -45,7 +46,9 @@ if(!$resultados){
 else{
     echo "Registro guardado <br><br>" ;
 
-    echo "<table><tr><td>$seccion</td></tr>";
+    echo "<table><tr><td>$id</td></tr>";
+
+    echo "<tr><td>$seccion</td></tr>";
 
     echo "<tr><td>$nombre</td></tr>";
 

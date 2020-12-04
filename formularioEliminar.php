@@ -21,6 +21,10 @@ caption{
     <table border="1">
     <caption><strong>ELIMINAR ARTÍCULOS</strong></caption>
     <tr>
+        <td><label for="id">ID:</label> </td>
+        <td><input type="number" name="id", id="id"></td>
+    </tr>
+    <tr>
         <td><label for="seccion">Sección:</label> </td>
         <td><input type="text" name="seccion", id="seccion"></td>
     </tr>

@@ -9,6 +9,7 @@
     
 <?php    
 
+$id= $_GET["id"];
 $seccion = $_GET["seccion"];
 $nombre = $_GET["nombre"];
 $fecha = $_GET["fecha"];
@@ -34,7 +35,7 @@ mysqli_select_db($conexion, $db_nombre) or die ("No se encuentra la BD");
 mysqli_set_charset($conexion, "utf8");
 
 //Realizar una consulta a la BD
-$consulta = "DELETE FROM artículos WHERE PRECIO = $precio";
+$consulta = "DELETE FROM artículos WHERE ID = $id";
 
 /*$resultados es una tabla virtual creada en memoria con los datos de la consulta.
 Es un resultset o recordset */

@@ -21,6 +21,10 @@ caption{
     <table border="1">
     <caption><strong>ARTÍCULOS</strong></caption>
     <tr>
+        <td><label for="id">ID:</label> </td>
+        <td><input type="number" name="id", id="id"></td>
+    </tr>
+    <tr>
         <td><label for="seccion">Sección:</label> </td>
         <td><input type="text" name="seccion", id="seccion"></td>
     </tr>
@@ -38,7 +42,7 @@ caption{
     </tr>
     <tr>
         <td><label for="precio">Precio:</td>
-        <td><input type="number" name="precio" id="precio"></td>
+        <td><input type="number" step="any" name="precio" id="precio"></td>
     </tr>
     <tr>
         <td><input type="submit" name="enviando" value="Click!"></td>
